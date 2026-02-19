@@ -49,7 +49,7 @@ fn App() -> Element {
         style { {APP_STYLE} }
         main { class: "container",
             h1 { "Pomodoro" }
-            p { class: "mode", "{if on_break() { "Break" } else { "Focus" }}" }
+            p { class: "mode", if on_break() { "Break" } else { "Focus" } }
             p { class: "timer", "{minutes:02}:{seconds:02}" }
             p { class: "sessions", "Completed sessions: {completed_sessions}" }
             div { class: "actions",
